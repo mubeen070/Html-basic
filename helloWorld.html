@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style> 
+            #left-panel {background-color: rgb(116, 116, 116); width:150px; height:100%; float:left;}
+            #right-panel {background-color:rgb(212, 203, 252);  width: 100%;}
+            .yellow-text { color: rgba(255, 0, 0, 0.788);}
+
+        </style>
+
+    </head>
+    
+    <body>
+
+        <h1>Lorem Ipsum</h1>
+        <p>Paragraph.</p>
+        
+        <div id="container" style="background-color: rgb(255, 0, 0); height: 300px">
+
+            <div id="left-panel" >
+                Left Panel
+                    <ul class="yellow-text">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>One</li>
+                        <li>One</li>
+                    </ul>
+            </div>
+            <div id="right-panel" >
+                <b>
+                    Right Panel
+                </b>
+                    <p class="yellow-text"> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ipsum in urna lacinia, nec placerat ligula auctor. Nulla nibh justo, laoreet porttitor urna a, mattis aliquet risus. Vestibulum vitae nisi semper, lacinia diam id, tincidunt metus. Nam a felis id ex pretium consequat. Aenean sed odio venenatis, aliquet risus at, sodales ligula. Proin at ultrices mi. Suspendisse magna tortor, efficitur vel eros quis, vestibulum condimentum diam. Suspendisse pretium commodo vulputate. Pellentesque dignissim tortor urna, quis pellentesque leo vulputate sit amet. Etiam imperdiet massa et mauris mattis iaculis. Quisque vitae lacinia sem.
+                    </p>
+                    <p>
+                        In hac habitasse platea dictumst. Vivamus tristique facilisis odio, a bibendum felis ullamcorper quis. Nullam ac dui in justo pellentesque dignissim. Fusce hendrerit, risus in interdum pellentesque, purus neque pharetra orci, ut sodales elit nulla non metus. Aliquam erat volutpat. Ut et est vitae lacus efficitur iaculis vitae quis massa. Phasellus ornare pharetra vehicula. Sed sed justo congue dui tincidunt bibendum.
+                    </p>
+                    
+                    <a href="page2.html">Click Me!</a>
+                <table border="1">
+            
+                    <tr>
+                          <th>Month</th>
+                          <th>Savings</th>
+                          <th>Loss</th>
+                        </tr>
+                        <tr>
+                          <td>January</td>
+                          <td>$100</td>
+                          <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                            <td>$100</td>
+                          </tr>
+                          <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                            <td>$100</td>
+                          </tr>
+                          <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                            <td>$100</td>
+                          </tr>
+                    </table>
+            </div>            
+        </div>
+    </body>
+
+    <script>
+
+        //alert("hellow world");
+        var x = document.getElementById("left-panel");
+        x.append("my anem ");
+    </script>
+</html>

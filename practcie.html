@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Caster</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- Latest compiled JavaScript -->
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+
+        <script>
+        
+            function getWeatherResults(){
+              
+
+                //var usrValue = document.getElementById("userInput");
+
+                var usrValue = $('#userInput');
+                usrValue = usrValue.val().toLowerCase()
+    
+                document.getElementById("weatherResult").style.display = "inline-block";
+                //alert(usrValue.value);
+                if(usrValue == 'gujranwala'){
+
+                        document.getElementById("weatherCity").innerText = "Todays , Gujranwala weather is hot.";
+                        
+                        var dayOfWeek = ["Sunday", "Monday", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                        var ranWeather = ["hot", "cold", "rainy", "dry"];
+                        
+                          dayOfWeek.forEach(element => {
+
+                            var temp = Math.floor((Math.random() * 60) + 1);
+                            var ranNm =  Math.floor((Math.random() * 4) + 1) - 1;
+
+                            $("#tblWeeklyWeather").append("<tr>" +
+                                                          "<td>" + element + "</td>" +
+                                                          "<td> Two</td>" +
+                                                          "<td> " + ranWeather[ ranNm] +"</td>" +
+                                                          "<td>"+ temp +"C°</td>" +
+                                                        "<tr>");
+                            });
+                }
+                else if(usrValue == 'lahore'){
+
+                        document.getElementById("weatherCity").innerText = "Todays , Lahore weather is very hot.";
+                }
+                else {
+                        document.getElementById("weatherCity").innerText = "Sorry! We dont have weather report!";
+                }
+                
+                
+                
+                
+            }
+    
+        </script>
+    </head>
+
+    <body>
+ 
+        <div class="container">
+            <div class="row">
+                <h1>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-ui-checks-grid" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2 10a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H2zm9-9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-3zm0 9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-3zm0-10a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-3zM2 9a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H2zm7 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3zM0 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.354.854l-2 2a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708L3 3.793l1.646-1.647a.5.5 0 1 1 .708.708z"/>
+                      </svg>
+                    <b>Weather Caster</b> 
+                </h1>
+            </div>
+            <div class="row">
+                <div class="Column">
+                    
+                    <form>
+                        <input type="text" name="userInput" id="userInput" placeholder="Search Here!">
+                        
+                        <select name="weatherType" id="weatherType">
+                              <option value="Hourly">Hourly</option>
+                              <option value="Daily">Daily</option>    
+                        </select>
+                        <button type="button" id="GetWeatherBtn" onclick="getWeatherResults()">Search </button>
+                    </form>                    
+                </div>
+            </div>
+            <div class="row">
+              <div class="Column">
+                <h3 class="app">Results</h3>
+        
+                <div id="weatherResult" style="display: none;" >
+                    <h1><i class="fas fa-cloud"></i>Weather Results</h1>
+                    <div id="weatherCity">
+
+                    </div>
+                    <table border="1" id="tblWeeklyWeather">
+                      <tr>
+                        <th>Day</th>
+                        <th>Hot/Cold</th>
+                        <th>Rainy/Dry</th>
+                        <th>Temperature</th>
+                      </tr>
+                   
+                    </table>
+                     
+                </div>
+
+                
+                </div>
+            </div>
+          </div>
+
+
+        
+
+        
+    </body>
+
+</html>
+
+
+
