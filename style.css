@@ -1,4 +1,30 @@
+body{ background-color:  rgb(164, 201, 202);}
 .weatherImage {
     width  :700px; 
     height :500px
 }   
+#tblWeeklyWeather tr td{
+
+padding: 20px;
+}
+
+.cloudy{
+    font-weight: bold;
+    background-image: url("./img/cloud.png");
+    background-repeat: no-repeat;
+    background-size: 83px 58px;
+    
+}
+.rainy{
+    font-weight: bold;
+    background-image: url("./img/rain.png");
+    background-repeat: no-repeat;
+    background-size: 83px 58px;
+
+}
+.clear{
+    font-weight: bold;
+    background-image: url("./img/clear.png");
+    background-repeat: no-repeat;
+    background-size: 83px 58px;
+}
