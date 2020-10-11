@@ -34,7 +34,7 @@ function getWeatherResults(){
                 
                 //alert(usrValue.value);
 
-                document.getElementById("weatherCity").innerText = rawdata.city.name;
+                document.getElementById("weatherCity").innerText = rawdata.city.name( style );
                         
                         
                         var dayOfWeek = ["Sunday", "Monday", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -46,10 +46,10 @@ function getWeatherResults(){
                             var ranNm =  Math.floor((Math.random() * 4) + 1) - 1;
 
                             $("#tblWeeklyWeather").append("<tr>" +
-                                                          "<td>" + element + "</td>" +
-                                                          "<td> Two</td>" +
-                                                          "<td> " + ranWeather[ ranNm] +"</td>" +
-                                                          "<td>"+ temp +"C°</td>" +
+                                                          "<th>" + element + "</th>" +
+                                                          "<th> Two</th>" +
+                                                          "<th> " + ranWeather[ ranNm] +"</th>" +
+                                                          "<th>"+ temp +"C°</th>" +
                                                         "<tr>");
                             });
 

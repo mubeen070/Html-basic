@@ -37,7 +37,7 @@ function getWeatherResults(){
                 document.getElementById("weatherCity").innerText = rawdata.city.name;
                         
                         
-
+                var weatherDates = [];
                         
                 rawdata.list.forEach(element => {
 
@@ -54,6 +54,9 @@ function getWeatherResults(){
                                 weatherClor = "clear"
                             }
 
+                            var d = new Date(element.dt_txt);
+                            weatherDates.push( d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate()  );
+                            
                             $("#tblWeeklyWeather").append("<tr>" +
                                                           "<td>" + element.dt_txt + "</td>" +
                                                           "<td> " + element.main.temp +"</td>" +
@@ -62,8 +65,27 @@ function getWeatherResults(){
                                                         "<tr>");
                             });
 
-                
-                
-                
-                
-            }
+                const unique = (value, index, self) => {
+                    return self.indexOf(value) === index
+                }
+                              
+                var uniqueDates = weatherDates.filter(unique)
+
+
+
+                for(var j=1; j <= uniqueDates.length; j++ )
+                {
+                    $("#weatherContainer").append('<table border="1">'+
+                                            '    <tr>'+
+                                            '    <th>Day/Time</th>'+
+                                            '    <th>Temperature</th>'+
+                                            '    <th>Weather</th>'+
+                                            '    <th>Wind</th>'+
+                                            '    </tr>'+
+                                            '</table>'
+                                            )
+                }
+
+
+}
+    

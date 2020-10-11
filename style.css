@@ -28,3 +28,6 @@ padding: 20px;
     background-repeat: no-repeat;
     background-size: 83px 58px;
 }
+.weatherCity{
+    font-size: 24px;
+}
