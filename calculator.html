@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+
+        <style>
+
+            .v-big-txt{ font-size: 100px;}
+            .cal-border{
+                border: black 1px solid !important;
+                padding: 12px;
+            }
+
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- Latest compiled JavaScript -->
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+
+        <script src="calculator.js"> </script>
+
+    </head>
+
+    <body>
+       <div class="container">
+           <div class="row">
+            <div class="card cal-border" style="width: 18rem;">
+                <div class="card-body">
+                    <h2 class="card-title"><b>Calculator</b></h2>
+                    <form>
+                        <label for="val1">Enter first value!</label>
+                        <input type="number" name="val1" class="form-control" id="val1" placeholder="First value!">
+        
+                        <label for="calOptions">Choose your function!</label>
+                        <select name="calOptions" class="form-control" id="calOptions">
+                              <option value="addition">+</option>
+                              <option value="subtraction">-</option>
+                              <option value="divide">/</option> 
+                              <option value="multiply">*</option>     
+                        </select>
+                        <label for="val2">Enter second value!</label>
+                        <input type="number" name="val2" class="form-control" id="val2" placeholder="Second value!">
+                        
+                        <button type="button" id="btnCalculator" class="btn btn-primary" onclick="Calculator()">Calculate</button>
+                    </form>  
+                    <div><h3>Result</h3>
+                         <span  id="calResult" class="v-big-txt"></span>
+            
+                    </div>       
+                </div>
+            </div>
+                
+          
+           </div>
+        
+       </div>
+       
+    </body>
+
+</html>
