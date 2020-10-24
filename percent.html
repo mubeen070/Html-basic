@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Percentage Finder</title>
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- Latest compiled JavaScript -->
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="percent.js"> </script>
+
+    </head>
+
+    <body style="background-image: url('./img/13884.jpg');">
+        <style> 
+            div {
+              width: 100px;
+              height: 100px;
+              background-color: red;
+              animation-name: example;
+              animation-duration: 4s;
+            }
+            
+            @keyframes example {
+              from {background-color: red;}
+              to {background-color: yellow;}
+            }
+        </style>
+            
+        
+        <div class="container" >
+            <div class="row">
+                <div class="card" >
+                    <div class="card-body">
+                     <h2 class="card-title"><b>Percentage Finder</b></h2>
+                        <form>
+                            <strong>What is <input name="" id="t1"> % of
+                                <input name="" id="t2"> ?
+                                </strong><br><br>
+                                <a class= "button btn btn-success" onclick="percentage()" >Calculate Percentage</a>
+                                </br><br>
+                            <h1> Result:
+                                <span id= "Result"></span>
+                            </h1>
+                            
+                            
+                        </form>  
+                       
+                    </div>    
+                </div>    
+            </div>                   
+        </div> 
+     </body>

@@ -34,7 +34,7 @@ function getWeatherResults(){
                 
                 //alert(usrValue.value);
 
-                document.getElementById("weatherCity").innerText = rawdata.city.name( style );
+                document.getElementById("weatherCity").innerText = rawdata.city.name;
                         
                         
                         var dayOfWeek = ["Sunday", "Monday", "Tue", "Wed", "Thu", "Fri", "Sat"];
