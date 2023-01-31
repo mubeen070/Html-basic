@@ -103,6 +103,12 @@ public class DressTemplate {
         this.designs = designs;
     }
 
+"Automated Attendance System is a location aware application with both mobile and web user interfaces. On the class schedule time when the class students located in the 10-meter radius of the class location, his attendance is automatically marked. On Class last 5th minute, Mobile app alert the teacher to ensure class attendance by class count and mark the absent student manually. Teacher provides the lecture title and finalize lecture attendance. Teacher can set his classes and their schedules in the app, while students simply subscribe/unsubscribe to the teacher class. Moreover, if the teacher is absent till the first 15 minutes the app automatically informs the DOO office to take appropriate action.
+1. Identify the Primary Actors, theirs goals and then draw its Use Case diagram.
+2. Select one use case from the UC diagram and write only the "Main Success Scenario" and "Extension (Exception with Alternative Course of Events)" sections of the fully dressed use case.
+3. For the main success scenario draw its System Sequence Diagram and design the interaction diagram for two system events using GRASP principles only.
+4. Draw the Class Diagram from the interaction diagrams and then write the code.
+
     public List<String> getLabels() {
         return labels;
     }
